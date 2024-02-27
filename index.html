@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="gl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bingo</title>
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+  <body>
+    <div class="taboleiro">
+      <!-- <audio controls autoplay>
+        <source src="assets/creepy-devil-dance-166764.mp3" type="audio/mp3">
+      </audio> -->
+      <div class="tab__sup">
+        <!--Tarxeta do xogador-->
+        <div class="tarxeta__xogador">
+          <div class="tarxeta__titulo">
+            <p class="tarxeta__nome">XOGADOR</p>
+          </div>
+          <div id="tarxetaP1" class="tarxeta__numeros">
+            <div class="numero numero1"></div>
+            <div class="numero numero1"></div>
+            <div class="numero numero1"></div>
+            <div class="numero numero1"></div>
+            <div class="numero numero1"></div>
+            <div class="numero numero1"></div>
+            <div class="numero numero1"></div>
+            <div class="numero numero1"></div>
+            <div class="numero numero1"></div>
+            <div class="numero numero1"></div>
+            <div class="numero numero1"></div>
+            <div class="numero numero1"></div>
+            <div class="numero numero1"></div>
+            <div class="numero numero1"></div>
+            <div class="numero numero1"></div>
+          </div>
+        </div>
+
+        <!--Marcador central-->
+        <div class="marcador">
+          <button id="repartir" class="repartir">Repartir cartóns</button>
+          <button id="btnNumero" class="sacar__numero">Sacar número</button>
+          <div class="marcador__numero"></div>
+          <p id="mostrarNumero" class="mostrar__numero"></p>
+        </div>
+
+        <!--Tarxeta CPU-->
+        <div class="tarxeta__cpu">
+          <div class="tarxeta__titulo">
+            <p class="tarxeta__nome">CPU</p>
+          </div>
+          <div id="tarxetaCpu" class="tarxeta__numeros">
+            <div class="numero numero2"></div>
+            <div class="numero numero2"></div>
+            <div class="numero numero2"></div>
+            <div class="numero numero2"></div>
+            <div class="numero numero2"></div>
+            <div class="numero numero2"></div>
+            <div class="numero numero2"></div>
+            <div class="numero numero2"></div>
+            <div class="numero numero2"></div>
+            <div class="numero numero2"></div>
+            <div class="numero numero2"></div>
+            <div class="numero numero2"></div>
+            <div class="numero numero2"></div>
+            <div class="numero numero2"></div>
+            <div class="numero numero2"></div>
+          </div>
+        </div>
+      </div>
+
+      <!--Marcador cos número sacados-->
+      <div id="tabInf" class="tab__inf"></div>
+    </div>
+    <div id="popup" class="popup ocultar">
+      <div id="popupfillo" class="popupfillo">
+        <h1 class="win" id="win"></h1>
+        <button onclick="cerrarPopup()" id="cerrar" class="cerrar">Cerrar</button>
+      </div>
+    </div>
+    <script src="js/script.js"></script>
+  </body>
+</html>

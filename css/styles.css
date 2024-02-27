@@ -1,0 +1,242 @@
+* {
+    margin: 0;
+    padding: 0;
+    outline: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: linear-gradient(#2455c0, #0b142c);
+    color: #000;
+}
+
+body,
+input,
+button {
+    font-size: 16px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+button {
+    cursor: pointer;
+}
+
+/* Estilos xerais */
+body {
+    background-image: url(../assets/fondo_bingo.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    backdrop-filter: invert(80%);
+    min-height: 100vh;
+    width: 100%;
+    padding: 15px;
+}
+
+.taboleiro {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 80px;
+}
+
+
+
+/* Taboleiro superior */
+.tab__sup {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    gap: 10px;
+    width: 100%;
+}
+
+.tarxeta__xogador,
+.tarxeta__cpu {
+    width: 300px;
+    height: 225px;
+    background-color: #1b9217;
+    box-shadow: 0 0 10px 3px #0b142c;
+    border-radius: 5px;
+}
+
+.tarxeta__titulo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 50px;
+    width: 100%;
+}
+
+.tarxeta__nome {
+    color: #eee;
+    font-size: 22px;
+    font-weight: 600;
+}
+
+.tarxeta__numeros {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px;
+    justify-content: center;
+    align-items: center;
+}
+
+.numero {
+    width: 52px;
+    height: 52px;
+    font-size: 18px;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #eee;
+}
+
+
+
+/*Bombo*/
+.marcador {
+    width: 250px;
+    border-radius: 50%;
+    background-color: #1562b98c;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    box-shadow: inset 0 0 10px black;
+    padding: 15px;
+}
+
+.repartir {
+    padding: 15px 10px;
+    color: #000000;
+    background-color: transparent;
+    border-radius: 100% 100% 0 0;
+    border: 3px solid rgb(255, 255, 255);
+    box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.534);
+    /* box-shadow: 0 0px 20px 10px rgba(255, 255, 255, 0.87); */
+}
+
+.repartir:hover {
+    background-color: #ccc;
+}
+
+
+.sacar__numero {
+    background-color: #000000;
+    color: #fff;
+    padding: 15px 10px;
+    width: 80%;
+    border-radius: 5px;
+}
+
+.repartir:active,
+.sacar__numero:active {
+    transform: scale(0.9);
+}
+
+.mostrar__numero {
+    width: 52px;
+    height: 52px;
+    border: 5px double black;
+    border-radius: 50%;
+    font-size: 22px;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #eee;
+    animation: mover 0.8s ease-out 0s 1;
+}
+
+@keyframes mover {
+    0% {
+        position: relative;
+        transform: translate(-20%, -75%);
+        opacity: 0.2;
+    }
+
+    100% {
+        position: relative;
+        transform: translate(0%);
+        opacity: 100%;
+    }
+}
+
+
+/* Taboleiro inferior */
+.tab__inf {
+    width: 90%;
+    display: flex;
+    gap: 5px;
+    flex-wrap: wrap;
+    align-content: flex-start;
+}
+
+.numeroInf {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    box-shadow: inset 0 0 5px black;
+    font-size: 18px;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #eee;
+}
+
+
+/* Popup */
+.popup{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: #00000091;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* z-index: -1; */
+}
+
+.ocultar{
+    display: none;
+}
+
+.popupfillo{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    /* gap: 20px; */
+}
+
+.win{
+    background-color: #1562b98c;
+    padding: 15px 10px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: #ccc;
+    font-weight: 800;
+    letter-spacing: 2px;
+    word-spacing: 5px;
+    text-align: center;
+    text-shadow: 0 0 8px #000;
+    border-radius: 15px 15px 0 0;
+    box-shadow: 0 0 20px 5px #000;
+}
+
+
+.cerrar{
+    background-color: #fff;
+    color: #2455c0;
+    font-size: 25px;
+    font-weight: 800;
+    letter-spacing: 1px;
+    width: 100%;
+    min-height: 40px;
+    border-radius: 0 0 15px 15px;
+    border: none;
+}
